@@ -1,27 +1,26 @@
 import React from 'react';
-import { Flex, IconButton } from 'frosted-ui';
-import { HomeIcon, BellIcon, ChatBubbleIcon, MagnifyingGlassIcon, PlusIcon } from '@radix-ui/react-icons';
+import { IconButton } from 'frosted-ui';
 
 const LeftmostSidebar: React.FC = () => {
   const icons = [
-    { Icon: HomeIcon, notificationCount: 0 },
-    { Icon: BellIcon, notificationCount: 4 },
-    { Icon: ChatBubbleIcon, notificationCount: 0 },
-    { Icon: MagnifyingGlassIcon, notificationCount: 0 },
+    { src: '/assets/iconStuff.png', alt: 'Home', notificationCount: 0 },
+    { src: '/assets/iconStuff.png', alt: 'Notifications', notificationCount: 4 },
+    { src: '/assets/iconStuff.png', alt: 'Chat', notificationCount: 0 },
+    { src: '/assets/iconStuff.png', alt: 'Search', notificationCount: 0 },
   ];
 
   return (
-    <Flex direction="column" className="w-16 bg-gray-900 py-4 items-center">
+    <div className="w-16 bg-[#090909] flex flex-col items-center py-4">
       <div className="mb-6">
-        <img src="/path-to-whop-logo.svg" alt="Whop Logo" className="w-8 h-8" />
+        <img src="/assets/whop.png" alt="Whop Logo" className="w-8 h-8" />
       </div>
-      {icons.map(({ Icon, notificationCount }, index) => (
+      {icons.map(({ src, alt, notificationCount }, index) => (
         <div key={index} className="relative mb-4">
           <IconButton variant="ghost" size="3" className="text-gray-400 hover:text-white">
-            <Icon />
+            <img src={src} alt={alt} className="w-6 h-6" />
           </IconButton>
           {notificationCount > 0 && (
-            <div className="absolute top-0 right-0 bg-red-500 rounded-full w-4 h-4 flex items-center justify-center text-xs text-white">
+            <div className="absolute -top-1 -right-1 bg-red-500 rounded-full w-4 h-4 flex items-center justify-center text-xs text-white">
               {notificationCount}
             </div>
           )}
@@ -29,10 +28,10 @@ const LeftmostSidebar: React.FC = () => {
       ))}
       <div className="mt-auto">
         <IconButton variant="ghost" size="3" className="text-gray-400 hover:text-white">
-          <PlusIcon />
+          <img src="/assets/iconStuff.png" alt="Add" className="w-6 h-6" />
         </IconButton>
       </div>
-    </Flex>
+    </div>
   );
 };
 

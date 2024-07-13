@@ -1,74 +1,107 @@
+/* styles/globals.css or styles/WhopClone.module.css */
+
 .container {
-    display: flex;
-    height: 100vh;
-    background-color: #1A1A1A;
-    color: white;
-  }
-  
-  .leftSidebar {
-    width: 250px;
-    background-color: #111111;
-    border-right: 1px solid #333;
-    padding: 20px;
-    overflow-y: auto;
-  }
-  
-  .mainContent {
-    flex: 1;
-    padding: 20px;
-    overflow-y: auto;
-  }
-  
-  .rightSidebar {
-    width: 250px;
-    background-color: #111111;
-    border-left: 1px solid #333;
-    padding: 20px;
-    overflow-y: auto;
-  }
-  
-  .menuItem {
-    padding: 10px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .menuItem:hover, .menuItem.active {
-    background-color: #333;
-  }
-  
-  .suggestionCard {
-    background-color: #222;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 15px;
-  }
-  
-  .userItem {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .userAvatar {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #333;
-    margin-right: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-  }
-  
-  .userName {
-    font-size: 14px;
-  }
-  
-  .userHandle {
-    font-size: 12px;
-    color: #888;
-  }
+  display: flex;
+  height: 100vh;
+  background-color: #0F0F0F;
+  color: white;
+}
+
+.leftmostSidebar {
+  width: 64px;
+  background-color: #090909;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.leftSidebar {
+  width: 240px;
+  background-color: #0F0F0F;
+  border-right: 1px solid #1E1E1E;
+  overflow-y: auto;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  background-color: #0F0F0F;
+}
+
+.rightSidebar {
+  width: 240px;
+  background-color: #0F0F0F;
+  border-left: 1px solid #1E1E1E;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.menuItem {
+  padding: 8px 16px;
+  margin-bottom: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.menuItem:hover, .menuItem.active {
+  background-color: #1E1E1E;
+}
+
+.suggestionCard {
+  background-color: #1E1E1E;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.userItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.userAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.userName {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.userHandle {
+  font-size: 12px;
+  color: #888;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.iconButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.notificationBadge {
+  background-color: #FF4D4F;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  position: absolute;
+  top: -4px;
+  right: -4px;
+}
