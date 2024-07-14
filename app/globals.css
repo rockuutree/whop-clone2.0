@@ -5,3 +5,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 
 
+@layer tw_base, frosted_ui, tw_components_utils;
+@import 'frosted-ui/styles.css' layer(frosted_ui);
+
+@layer tw_base {
+  @tailwind base;
+}
+
+@layer tw_components_utils {
+  @tailwind components;
+  @tailwind utilities;
+}
+
+.custom-scrollbar [data-radix-scroll-area-viewport] {
+    background-color: #2E2E2E !important;
+  }
+  
+  .custom-scrollbar [data-radix-scroll-area-viewport] > div {
+    background-color: #0F0F0F !important;
+  }
+  
+  .custom-scrollbar [data-radix-scroll-area-scrollbar] {
+    background-color: #2E2E2E !important;
+  }
+  
+  .custom-scrollbar [data-radix-scroll-area-thumb] {
+    background-color: #4A4A4A !important;
+  }

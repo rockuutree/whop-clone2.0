@@ -105,3 +105,19 @@
   top: -4px;
   right: -4px;
 }
+
+.custom-scrollbar [data-radix-scroll-area-viewport] {
+  background-color: #2E2E2E !important;
+}
+
+.custom-scrollbar [data-radix-scroll-area-viewport] > div {
+  background-color: #0F0F0F !important;
+}
+
+.custom-scrollbar [data-radix-scroll-area-scrollbar] {
+  background-color: #2E2E2E !important;
+}
+
+.custom-scrollbar [data-radix-scroll-area-thumb] {
+  background-color: #4A4A4A !important;
+}
