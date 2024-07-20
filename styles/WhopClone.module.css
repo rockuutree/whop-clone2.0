@@ -1,5 +1,29 @@
 /* styles/globals.css or styles/WhopClone.module.css */
 
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-color) #090909;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #090909;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-color);
+  border-radius: 20px;
+  border: 2px solid #090909;
+}
+
+/* For Webkit browsers */
+.custom-scrollbar::-webkit-scrollbar {
+  display: block;
+}
+
 .container {
   display: flex;
   height: 100vh;

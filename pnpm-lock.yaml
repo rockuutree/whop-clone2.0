@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@frosted-ui/icons':
+        specifier: 0.0.1-canary.15
+        version: 0.0.1-canary.15(@types/react@18.2.42)(react@18.2.0)
       '@radix-ui/react-alert-dialog':
         specifier: ^1.0.5
         version: 1.0.5(@types/react-dom@18.2.17)(@types/react@18.2.42)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -359,6 +362,12 @@ packages:
     peerDependencies:
       '@fortawesome/fontawesome-svg-core': ~1 || ~6
       react: '>=16.3'
+
+  '@frosted-ui/icons@0.0.1-canary.15':
+    resolution: {integrity: sha512-7//EB7C4Er6FedZI4ZSQ7wiE2s57/uQ95EOBfJq+H3sS1hKbJxQ733oOh0QOS7K1CASetMa3QcwWFJ2SRhncwA==}
+    peerDependencies:
+      '@types/react': '*'
+      react: ^16.x || ^17.x || ^18.x
 
   '@grpc/grpc-js@1.9.14':
     resolution: {integrity: sha512-nOpuzZ2G3IuMFN+UPPpKrC6NsLmWsTqSsm66IRfnBt1D4pwTqE27lmbpcPM+l2Ua4gE7PfjRHI6uedAy7hoXUw==}
@@ -3129,6 +3138,11 @@ snapshots:
     dependencies:
       '@fortawesome/fontawesome-svg-core': 6.5.2
       prop-types: 15.8.1
+      react: 18.2.0
+
+  '@frosted-ui/icons@0.0.1-canary.15(@types/react@18.2.42)(react@18.2.0)':
+    dependencies:
+      '@types/react': 18.2.42
       react: 18.2.0
 
   '@grpc/grpc-js@1.9.14':

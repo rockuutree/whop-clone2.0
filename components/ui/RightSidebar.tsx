@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar, Flex, Text, TableRoot, TableBody, TableRow, TableCell } from 'frosted-ui';
+import { Avatar, Flex, Text, TableRoot, TableBody, TableRow, TableCell, Container } from 'frosted-ui';
 
 const RightSidebar: React.FC = () => {
   const users = [
@@ -10,7 +10,7 @@ const RightSidebar: React.FC = () => {
   ];
 
   return (
-    <div>
+    <Container >
       <Text weight="bold" mb="4" className="text-white p-4">User Directory</Text>
       <TableRoot size="2" variant="surface">
         <TableBody>
@@ -30,7 +30,7 @@ const RightSidebar: React.FC = () => {
           ))}
         </TableBody>
       </TableRoot>
-    </div>
+    </Container>
   );
 };
 

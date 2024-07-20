@@ -12,23 +12,18 @@
   @tailwind base;
 }
 
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI (Custom)', Roboto, 'Helvetica Neue', 'Open Sans (Custom)', system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  }
+
 @layer tw_components_utils {
   @tailwind components;
   @tailwind utilities;
 }
 
-.custom-scrollbar [data-radix-scroll-area-viewport] {
-    background-color: #2E2E2E !important;
+
+  /* globals.css */
+html, body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI (Custom)', Roboto, 'Helvetica Neue', 'Open Sans (Custom)', system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   }
   
-  .custom-scrollbar [data-radix-scroll-area-viewport] > div {
-    background-color: #0F0F0F !important;
-  }
-  
-  .custom-scrollbar [data-radix-scroll-area-scrollbar] {
-    background-color: #2E2E2E !important;
-  }
-  
-  .custom-scrollbar [data-radix-scroll-area-thumb] {
-    background-color: #4A4A4A !important;
-  }
