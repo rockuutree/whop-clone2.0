@@ -7,12 +7,20 @@ const RightSidebar: React.FC = () => {
     { name: 'Cameron', handle: 'wh0p', src: '/cameron.png' },
     { name: 'Steven', handle: '.whop', src: '/delmo.png' },
     { name: 'Delmo', handle: '_delmo', src: '/steven.png' },
+    { name: 'Rocktree', handle: 'rocktree', src: '/rocktree.jpeg' },
+    { name: 'Cameron', handle: 'wh0p', src: '/cameron.png' },
+    { name: 'Steven', handle: '.whop', src: '/delmo.png' },
+    { name: 'Delmo', handle: '_delmo', src: '/steven.png' },
+    { name: 'Rocktree', handle: 'rocktree', src: '/rocktree.jpeg' },
+    { name: 'Cameron', handle: 'wh0p', src: '/cameron.png' },
+    { name: 'Steven', handle: '.whop', src: '/delmo.png' },
+    { name: 'Delmo', handle: '_delmo', src: '/steven.png' },
   ];
 
   return (
     <Container >
       <Text weight="bold" mb="4" className="text-white p-4">User Directory</Text>
-      <TableRoot size="2" variant="surface">
+      <TableRoot size="2" variant="ghost">
         <TableBody>
           {users.map((user, index) => (
             <TableRow key={index}>

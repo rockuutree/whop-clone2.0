@@ -12,10 +12,12 @@ const LeftmostSidebar: React.FC = () => {
   };
 
   const profileIcons = [
-    { src: '', alt: 'P' },
-    { src: '', alt: 'S' },
-    { src: '', alt: 'R' },
     { src: '/whopGroup.png', alt: 'Profile' },
+    { src: '', alt: 'R' },
+    { src: '', alt: 'Y' },
+    { src: '', alt: 'A' },
+    { src: '', alt: 'N' },
+
   ];
 
   const utilityIcons = [
@@ -25,8 +27,8 @@ const LeftmostSidebar: React.FC = () => {
   ];
 
   return (
-    <Container width="9" style={{ borderRight: '0.5px solid #403f3f' }}>
-      <Flex direction="column" align="center" className="bg-[#090909] py-4 space-y-6">
+    <Container width="9" style={{ borderRight: '0.5px solid #2A2A2A' }}>
+      <Flex direction="column" align="center" className="bg-[#111111] py-4 space-y-6">
         <Image src="/whop.png" alt="Whop Logo" width={36} height={36} className="mb-4 mt-4" />
         <Button variant="ghost" onClick={() => handleIconClick(-1)}>
           <Home size={24} className="cursor-pointer mt-4 mb-2" color="#797979" />
@@ -34,7 +36,7 @@ const LeftmostSidebar: React.FC = () => {
         <Button variant="ghost" onClick={() => handleIconClick(-2)}>
           <Bell size={24} className="cursor-pointer mb-2 mt-4"  color="#797979" />
         </Button>
-        <div className="@[8rem]:mx-4 bg-[#403f3f] mx-3 my-3 h-[1px] self-stretch"></div>
+        <div className="@[8rem]:mx-4 bg-[#2A2A2A] mx-3 my-3 h-[1px] self-stretch"></div>
         
         {/* Profile Icons */}
         <Flex direction="column" align="center" className="space-y-2">
@@ -45,6 +47,7 @@ const LeftmostSidebar: React.FC = () => {
               onClick={() => handleIconClick(index)}
             >
               <Avatar
+                color="info"
                 src={src}
                 fallback={alt}
                 alt={alt}
@@ -57,30 +60,36 @@ const LeftmostSidebar: React.FC = () => {
               />
             </Badge>
           ))}
-        </Flex>
-
         {/* Utility Icons */}
-        <Flex direction="column" align="center" className="space-y-2">
           {utilityIcons.map(({ src, alt }, index) => (
             <Badge
               key={`utility-${index}`}
               className="cursor-pointer transition-transform duration-200 ease-in-out hover:scale-110 active:scale-125"
               onClick={() => handleIconClick(profileIcons.length + index)}
             >
-              <SkeletonAvatar color="gray" size="3">
-                <Image
-                  src={src}
-                  alt={alt}
-                  width={24}
-                  height={24}
-                  className="cursor-pointer"
-                />
+              <SkeletonAvatar color="info" size="3" style={{ position: 'relative' }}>
+                <div style={{
+                  position: 'absolute',
+                  top: '50%',
+                  left: '50%',
+                  transform: 'translate(-50%, -50%)',
+                  width: '24px',
+                  height: '24px'
+                }}>
+                  <Image
+                    src={src}
+                    alt={alt}
+                    layout="fill"
+                    objectFit="contain"
+                    className="cursor-pointer"
+                  />
+                </div>
               </SkeletonAvatar>
             </Badge>
           ))}
         </Flex>
 
-        <div className="mt-auto">
+        <div style={{ marginTop: '11em' }}>
           <IconButton
             aria-label="Add"
             variant="ghost"

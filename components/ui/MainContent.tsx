@@ -42,11 +42,11 @@ const MainContent: React.FC = () => {
 
   return (
     <ScrollArea
-      className='bg-[#090909] h-full overflow-y-auto'
+      className='bg-[#111111] h-full overflow-y-auto'
       size="1"  
-      style={{padding: '16px 16px', border: '0.5px solid #403f3f'}}
+      style={{padding: '16px 16px', border: '0.5px solid #2A2A2A'}}
     >
-      <Container className="h-screen bg-[#090909] text-white p-2 rounded" style={{padding: '16px 16px'}}>
+      <Container className="h-screen bg-[#111111] text-white p-2 rounded" style={{padding: '16px 16px'}}>
         <Box className="h-full rounded-lg overflow-hidden border border-[#242424] p-4">
           <Flex justify="between" align="center" mb="6">
             <Heading size="7" weight="medium" className="font-light">Suggestions</Heading>
@@ -58,19 +58,19 @@ const MainContent: React.FC = () => {
             Welcome to Whop Suggestions!! Please post any feedback or suggestion you have for anything Whop related! We will go through these requests daily, and make sure we knock out as many as we can! If you make a suggestion and it gets implemented, we will send you free Whop merch (hoodies, t-shirts, and more!)
           </Text>
           {suggestions.map((suggestion, index) => (
-            <Box key={index} className="rounded-lg mb-6 overflow-hidden" style={{border: '0.5px solid #403f3f'}}>
+            <Box key={index} className="rounded-lg mb-6 overflow-hidden" style={{border: '0.5px solid #2A2A2A'}}>
               <Box p="4">
                 <Heading size="3" className="mb-3">{suggestion.title}</Heading>
                 <Text className="text-gray-400 mb-4 leading-relaxed">{suggestion.description}</Text>
               </Box>
-              <Flex justify="between" align="center" className="bg-[#090909] px-4 py-3">
+              <Flex justify="between" align="center" className="bg-[#111111] px-4 py-3">
                 <Flex align="center" gap="4">
-                  <Button variant="ghost" size="2" className="text-green-500">
-                    <ChevronUp size={18} />
+                  <Button variant="ghost" size="2" className="text-gray-500">
+                    <ChevronUp color="grey" size={18} />
                     {suggestion.upvotes}
                   </Button>
-                  <Button variant="ghost" size="2" className="text-red-500">
-                    <ChevronDown size={18} />
+                  <Button variant="ghost" size="2" className="text-gray-500">
+                    <ChevronDown color="grey" size={18} />
                     {suggestion.downvotes}
                   </Button>
                 </Flex>

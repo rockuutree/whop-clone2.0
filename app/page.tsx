@@ -6,7 +6,7 @@ import RightSidebar from '../components/ui/RightSidebar';
 
 export default function Home() {
   return (
-    <div className="flex h-screen bg-[#090909]">
+    <div className="flex h-screen bg-[#111111]">
       <LeftmostSidebar />
       <LeftSidebar />
       <div className="flex-grow overflow-hidden">
