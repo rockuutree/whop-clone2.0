@@ -225,7 +225,11 @@ const Data: React.FC = () => {
 
                 <Heading size="6" mb="4">Solution</Heading>
                 <Text mb="6">
-                Solution: Allow users to query and access business data using natural language (NLP), making it accessible to non-technical users. They can type a natural language query and it will be converted to SQL and be executed against a database, which can return a table listing their request or even a chart.
+                Solution: Allow users to query and access business data using natural language (NLP), making it accessible to non-technical users. Basically summarizes large amounts of data into digestable portions based off the user's desired outcome. They can type a natural language query and it will be converted to SQL and be executed against a database, which can return a table listing their request or even a chart. 
+                </Text>
+                <br />
+                <Text mb="6">
+                dads
                 </Text>
           </Box>
         </Box>

@@ -14,6 +14,12 @@ const MainContent: React.FC<MainContentProps> = ({ selectedContent }) => {
 
   const suggestions = [
     {
+      title: "Offers a conversational AI platform designed to make business data accessible to everyone within an organization",
+      description: "Chat for Natural Language Queries: Users can query business data using natural language, making it easier for non-technical users to access and understand data. By using natural language processing and AI utility to generate reports or visuals quickly, it makes valuable business data accessible to all employees, not just IT professionals, allowing organizations to fully utilize their data for insights and decision-making.",
+      upvotes: 67,
+      downvotes: 0
+    },
+    {
       title: "Automated Reminder Notifications To Leave A Review After Purchase.",
       description: "Can we have Whop automatically send a reminder notification or prompt to customers after X number of days to leave a review and include directions on where to find the review submission page? While we're at it, can we display the link to leave a review somewhere prominent instead of hiding it behind layers of links and menu items?",
       upvotes: 67,
