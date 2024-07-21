@@ -7,6 +7,8 @@ const RightSidebar: React.FC = () => {
     { name: 'Cameron', handle: 'wh0p', src: '/cameron.png' },
     { name: 'Steven', handle: '.whop', src: '/delmo.png' },
     { name: 'Sharkey', handle: 'sharkey11', src: '/sharkey.png' },
+    { name: 'JACKSON', handle: 'd1rty_j', src: '/jackson.png' },
+
     { name: 'Delmo', handle: '_delmo', src: '/steven.png' },
     { name: 'Jordan', handle: '01101010', src: '/jordan.png' },
     { name: 'baked', handle: 'baked.dev', src: '/baked.png' },
