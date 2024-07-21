@@ -7,19 +7,21 @@ const RightSidebar: React.FC = () => {
     { name: 'Cameron', handle: 'wh0p', src: '/cameron.png' },
     { name: 'Steven', handle: '.whop', src: '/delmo.png' },
     { name: 'Delmo', handle: '_delmo', src: '/steven.png' },
+    { name: 'Jordan', handle: '01101010', src: '/jordan.png' },
+    { name: 'baked', handle: 'baked.dev', src: '/baked.png' },
+    { name: 'Artur Bien', handle: 'arturbien', src: '/artur.png' },
     { name: 'Rocktree', handle: 'rocktree', src: '/rocktree.jpeg' },
     { name: 'Cameron', handle: 'wh0p', src: '/cameron.png' },
     { name: 'Steven', handle: '.whop', src: '/delmo.png' },
     { name: 'Delmo', handle: '_delmo', src: '/steven.png' },
-    { name: 'Rocktree', handle: 'rocktree', src: '/rocktree.jpeg' },
-    { name: 'Cameron', handle: 'wh0p', src: '/cameron.png' },
-    { name: 'Steven', handle: '.whop', src: '/delmo.png' },
-    { name: 'Delmo', handle: '_delmo', src: '/steven.png' },
+    { name: 'Jordan', handle: '01101010', src: '/jordan.png' },
+    { name: 'baked', handle: 'baked.dev', src: '/baked.png' },
+    { name: 'Artur Bien', handle: 'arturbien', src: '/artur.png' },
   ];
 
   return (
     <Container >
-      <Text weight="bold" mb="4" className="text-white p-4">User Directory</Text>
+      <Text weight="bold" mt="5" mb="4" className="text-white p-4">User Directory</Text>
       <TableRoot size="2" variant="ghost">
         <TableBody>
           {users.map((user, index) => (

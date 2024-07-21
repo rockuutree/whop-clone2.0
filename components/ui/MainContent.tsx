@@ -1,9 +1,17 @@
-import React from 'react';
-import { Button, ScrollArea, Box, Heading, Flex, Text, Container } from 'frosted-ui';
+'use client';
+
+import React, { useState } from 'react';
+import { ScrollArea, Box, Heading, Flex, Text, Container, Button } from 'frosted-ui';
+import Image from 'next/image';
 import { ChevronUp, ChevronDown } from 'lucide-react';
+import Data from './Data';
 
+interface MainContentProps {
+  selectedContent: string;
+}
 
-const MainContent: React.FC = () => {
+const MainContent: React.FC<MainContentProps> = ({ selectedContent }) => {
+
   const suggestions = [
     {
       title: "Automated Reminder Notifications To Leave A Review After Purchase.",
@@ -24,21 +32,69 @@ const MainContent: React.FC = () => {
       downvotes: 0,
       response: "Great idea. Will keep you posted on if/when this is coming!"
     },
-    {
-      title: "Watermarks",
-      description: "Add unique watermarks to all content including attachments such as PDF's. It looks like you guys are incorporating it with videos which is great but it would be even better if you extended out that watermark to more forms of content!",
-      upvotes: 15,
-      downvotes: 0,
-      response: "Great idea. Will keep you posted on if/when this is coming!"
-    },
-    {
-      title: "Watermarks",
-      description: "Add unique watermarks to all content including attachments such as PDF's. It looks like you guys are incorporating it with videos which is great but it would be even better if you extended out that watermark to more forms of content!",
-      upvotes: 15,
-      downvotes: 0,
-      response: "Great idea. Will keep you posted on if/when this is coming!"
-    },
   ];
+
+  const renderContent = () => {
+    switch (selectedContent) {
+      case 'my resume':
+        return (
+          <Box p="4">
+            <Heading size="6" mb="4">Ryans Resume</Heading>
+            {/* Replace this with an actual PDF viewer when you have the resume */}
+            <iframe
+              src="/frontendTypescript.pdf"
+              title="Ryans Resume"
+              width="100%"
+              height="750px"
+              style={{ border: 'none' }}
+            />
+          </Box>
+        );
+
+      case 'suggestions':
+        return (
+          <Box className="h-full rounded-lg overflow-hidden border border-[#242424] p-4">
+            <Flex justify="between" align="center" mb="6">
+              <Heading size="7" weight="medium" className="font-light">Suggestions</Heading>
+              <Button variant="classic" className="text-white">
+                + New Suggestion
+              </Button>
+            </Flex>
+            <Text mb="5" className="text-gray-500 leading-relaxed">
+              Welcome to Whop Suggestions!! Please post any feedback or suggestion you have for anything Whop related! We will go through these requests daily, and make sure we knock out as many as we can! If you make a suggestion and it gets implemented, we will send you free Whop merch (hoodies, t-shirts, and more!)
+            </Text>
+            {suggestions.map((suggestion, index) => (
+              <Box mt="3" key={index} className="rounded-lg mb-6 overflow-hidden" style={{border: '0.5px solid #2A2A2A'}}>
+                <Box p="4">
+                  <Heading size="3" className="mb-3">{suggestion.title}</Heading>
+                  <Text className="text-gray-400 mb-4 leading-relaxed">{suggestion.description}</Text>
+                </Box>
+                <Flex justify="between" align="center" className="bg-[#111111] px-4 py-3">
+                  <Flex align="center" gap="4">
+                    <Button variant="ghost" size="2" className="text-gray-500">
+                      <ChevronUp color="grey" size={18} />
+                      {suggestion.upvotes}
+                    </Button>
+                    <Button variant="ghost" size="2" className="text-gray-500">
+                      <ChevronDown color="grey" size={18} />
+                      {suggestion.downvotes}
+                    </Button>
+                  </Flex>
+                </Flex>
+              </Box>
+            ))}
+          </Box>
+        );
+        case 'data':
+          return <Data />;
+      default:
+        return (
+          <Box p="4">
+            <Heading size="6">Select an item from the sidebar</Heading>
+          </Box>
+        );
+    }
+  };
 
   return (
     <ScrollArea
@@ -47,37 +103,7 @@ const MainContent: React.FC = () => {
       style={{padding: '16px 16px', border: '0.5px solid #2A2A2A'}}
     >
       <Container className="h-screen bg-[#111111] text-white p-2 rounded" style={{padding: '16px 16px'}}>
-        <Box className="h-full rounded-lg overflow-hidden border border-[#242424] p-4">
-          <Flex justify="between" align="center" mb="6">
-            <Heading size="7" weight="medium" className="font-light">Suggestions</Heading>
-            <Button variant="classic" className="text-white">
-              + New Suggestion
-            </Button>
-          </Flex>
-          <Text className="text-gray-400 mb-6 leading-relaxed">
-            Welcome to Whop Suggestions!! Please post any feedback or suggestion you have for anything Whop related! We will go through these requests daily, and make sure we knock out as many as we can! If you make a suggestion and it gets implemented, we will send you free Whop merch (hoodies, t-shirts, and more!)
-          </Text>
-          {suggestions.map((suggestion, index) => (
-            <Box key={index} className="rounded-lg mb-6 overflow-hidden" style={{border: '0.5px solid #2A2A2A'}}>
-              <Box p="4">
-                <Heading size="3" className="mb-3">{suggestion.title}</Heading>
-                <Text className="text-gray-400 mb-4 leading-relaxed">{suggestion.description}</Text>
-              </Box>
-              <Flex justify="between" align="center" className="bg-[#111111] px-4 py-3">
-                <Flex align="center" gap="4">
-                  <Button variant="ghost" size="2" className="text-gray-500">
-                    <ChevronUp color="grey" size={18} />
-                    {suggestion.upvotes}
-                  </Button>
-                  <Button variant="ghost" size="2" className="text-gray-500">
-                    <ChevronDown color="grey" size={18} />
-                    {suggestion.downvotes}
-                  </Button>
-                </Flex>
-              </Flex>
-            </Box>
-          ))}
-        </Box>
+        {renderContent()}
       </Container>
     </ScrollArea>
   );
