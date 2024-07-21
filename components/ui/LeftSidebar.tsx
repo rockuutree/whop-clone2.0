@@ -115,7 +115,7 @@ const LeftSidebar: React.FC<LeftSidebarProps> = ({ setSelectedContent }) => {
             <Flex align="center" gap="8">
               <Text size="2" className="text-white">Whop University</Text>
               <Flex align="center" gap="1">
-                <Avatar fallback="i" size='0' src="/person.svg" alt="Person Icon" />
+                <Avatar fallback="i" color="info" size="1" src="/person.svg" alt="Person Icon" style={{ width: '15px', height: '15px' }}/>
                 <Text size="2" className="text-white">3,807</Text>
               </Flex>
             </Flex>
