@@ -18,8 +18,6 @@ const RightSidebar: React.FC = () => {
     { name: 'Steven', handle: '.whop', src: '/delmo.png' },
     { name: 'Delmo', handle: '_delmo', src: '/steven.png' },
     { name: 'Jordan', handle: '01101010', src: '/jordan.png' },
-    { name: 'baked', handle: 'baked.dev', src: '/baked.png' },
-    { name: 'Artur Bien', handle: 'arturbien', src: '/artur.png' },
   ];
 
   return (
