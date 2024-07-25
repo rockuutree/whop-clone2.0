@@ -209,7 +209,7 @@ const Data: React.FC = () => {
   };
 
   return (
-    <Box p="4">
+    <Box p="4" className="bg-[#07070]">
       <Heading size="6" mb="4">NLP Data Query</Heading>
       <Flex direction="column" gap="3">
         <Box className="rounded-lg mb-6 overflow-hidden" style={{border: '0.5px solid #2A2A2A'}}>
@@ -227,10 +227,7 @@ const Data: React.FC = () => {
                 <Text mb="6">
                 Solution: Allow users to query and access business data using natural language (NLP), making it accessible to non-technical users. Basically summarizes large amounts of data into digestable portions based off the users desired outcome. They can type a natural language query and it will be converted to SQL and be executed against a database, which can return a table listing their request or even a chart. 
                 </Text>
-                <br />
-                <Text mb="6">
-                dads
-                </Text>
+
           </Box>
         </Box>
       </Flex>
